@@ -4,7 +4,7 @@ import org.example.renderable.Renderable;
 
 import java.util.Random;
 
-class Board {
+public class Board {
     public final int width;
     public final int height;
     private final char[][] tbl;
@@ -31,5 +31,9 @@ class Board {
 
     public void render(Renderable renderable) {
         renderable.render(tbl);
+    }
+
+    public boolean valid(int j, int i) {
+        return tbl[j][i] == ' ';
     }
 }
